@@ -29,7 +29,9 @@ public class ConcreteWeatherSubject extends Observable{
 		//注意在通知之前，在用java中的Observer模式的时候，下面这句话不可少
 		this.setChanged();
 		//然后主动通知，这里我们先用推得方式
-		this.notifyObservers();
+		this.notifyObservers(content);
+		//如果是拉的方式，我们就调用
+		//this.notifyObservers();
 	}
 	
 	
